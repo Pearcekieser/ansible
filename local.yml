@@ -4,12 +4,6 @@
   #   dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
   #   personal: "{{ lookup('env', 'HOME') }}/personal"
   pre_tasks:
-  - name: Ensure brew requirements are met
-    homebrew:
-      name: "{{ item }}"
-      state: present
-    with_items:
-      - gnu-tar
   - name: Brew Update
     community.general.homebrew:
       update_homebrew: true
