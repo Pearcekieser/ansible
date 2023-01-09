@@ -1,15 +1,6 @@
 - name: Mac Fonts | Set fonts variable
   set_fact:
     fonts:
-      - name: FiraCode
-        archive: https://github.com/tonsky/firacode.git
-        directory: distr/ttf
-        files:
-          - FiraCode-Bold.ttf
-          - FiraCode-Light.ttf
-          - FiraCode-Medium.ttf
-          - FiraCode-Regular.ttf
-          - FiraCode-Retina.ttf
       - name: Monoid
         archive: https://github.com/jb-dmitry/monoid.git
         directory: Monoisome
@@ -31,6 +22,10 @@
   with_subelements:
     - "{{ fonts }}"
     - "files"
+- name: "Brew install fira code font"
+  community.general.homebrew:
+    name: "homebrew/cask-fonts/font-fira-code"
+    state: present
 - name: Mac Fonts | Remove repositories
   file:
     path: "/tmp/fonts-{{ item.name }}"
