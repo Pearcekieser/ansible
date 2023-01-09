@@ -1,10 +1,12 @@
-- name: "Mac Settings | keyboard fixes"
-  community.general.osx_defaults:
-    domain: "Apple Global Domain"
-    key: com.apple.keyboard.modifiermapping.1452-834-0
-    host: currentHost
-    type: array
-    value: 
-      - HIDKeyboardModifierMappingDst: 30064771113
-        HIDKeyboardModifierMappingSrc: 30064771129
+# TODO fix dict -> Unhashable type issue here https://github.com/ansible-collections/community.general/blob/main/plugins/modules/osx_defaults.py#L348
+
+# - name: "Mac Settings | keyboard fixes"
+#   community.general.osx_defaults:
+#     domain: "Apple Global Domain"
+#     key: com.apple.keyboard.modifiermapping.1452-834-0
+#     host: currentHost
+#     type: array
+#     value: 
+#       - HIDKeyboardModifierMappingDst: 30064771113
+#         HIDKeyboardModifierMappingSrc: 30064771129
         
