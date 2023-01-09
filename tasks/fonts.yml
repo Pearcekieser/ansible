@@ -23,7 +23,7 @@
     - "{{ fonts }}"
     - "files"
 - name: "Brew install fira code font"
-  community.general.homebrew:
+  community.general.homebrew_cask:
     name: "homebrew/cask-fonts/font-fira-code"
     state: present
 - name: Mac Fonts | Remove repositories
