@@ -3,7 +3,7 @@
     domain: "Apple Global Domain"
     key: com.apple.keyboard.modifiermapping.1452-834-0
     host: currentHost
-    type: string
+    type: list
     value: |
         (
           {
