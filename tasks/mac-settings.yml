@@ -2,6 +2,7 @@
   community.general.osx_defaults:
     domain: "Apple Global Domain"
     key: com.apple.keyboard.modifermapping.1452-834-0
+    host: currentHost
     type: string
     value: |
         (
