@@ -1,0 +1,9 @@
+- name: "Mac Settings | keyboard fixes"
+  community.general.osx_defaults:
+    domain: "Apple Global Domain"
+    key: com.apple.keyboard.modifermapping.1452-834-0
+    type: array
+    value: 
+      - HIDKeyboardModifierMappingDst: 30064771113
+        HIDKeyboardModifierMappingSrc: 30064771129
+    
