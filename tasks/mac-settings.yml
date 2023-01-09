@@ -4,10 +4,7 @@
     key: com.apple.keyboard.modifiermapping.1452-834-0
     host: currentHost
     type: array
-    value: |
-        (
-          {
-            HIDKeyboardModifierMappingDst = 30064771113;
-            HIDKeyboardModifierMappingSrc = 30064771129;
-          }
-        )
+    value: 
+      - HIDKeyboardModifierMappingDst: 30064771113
+        HIDKeyboardModifierMappingSrc: 30064771129
+        
