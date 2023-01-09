@@ -13,6 +13,5 @@
   community.general.osx_defaults:
     domain: "Apple Global Domain"
     key: AppleInterfaceStyle
-    host: currentHost
     type: string
     value: Dark
