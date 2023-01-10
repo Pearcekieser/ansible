@@ -1,0 +1,66 @@
+- name: Dock | Set remove configuration
+  set_fact:
+    dockitems_remove:
+      - Launchpad
+      - Safari
+      - Messages
+      - Mail
+      - Maps
+      - Photos
+      - FaceTime
+      - Calendar
+      - Contacts
+      - Reminders
+      - Notes
+      - TV
+      - Music
+      - Podcasts
+      - News
+      - Keynote
+      - Numbers
+      - Pages
+      - "App Store"
+  when: dockitems_remove is undefined
+- name: Dock | Set persist configuration
+  set_fact:
+    dockitems_persist:
+      - name: Google Chrome
+        path: "/Applications/Google Chrome.app/"
+        pos: 2
+      - name: Visual Studio Code
+        path: "/Applications/Visual Studio Code.app/"
+        pos: 3
+      - name: IntelliJ IDEA CE
+        path: "/Applications/IntelliJ IDEA CE.app/"
+        pos: 4
+      - name: iTerm
+        path: "/Applications/iTerm.app/"
+        pos: 5
+      - name: System Preferences
+        path: "/System/Applications/System Preferences.app/"
+        pos: 6
+      - name: Activity Monitor
+        path: "/System/Applications/Activity Monitor.app/"
+        pos: 7
+  when: dockitems_persist is undefined
+
+- name: Dock | Brew Install Dockutil
+  community.general.homebrew_cask:
+    name: "hpedrorodrigues/tools/dockutil"
+    state: present
+- name: Dock | Remove configured Dock items.
+  ansible.builtin.include_tasks: dock/dock-remove.yml
+  loop: "{{ dockitems_remove }}"
+  tags: ['dock']
+- name: Dock | Ensure required dock items exist.
+  ansible.builtin.include_tasks: dock/dock-add.yml
+  loop: "{{ dockitems_persist }}"
+  tags: ['dock']
+
+- name: Dock | Ensure dock items are in correct position.
+  ansible.builtin.include_tasks: dock/dock-position.yml
+  when:
+    - item.pos is defined
+    - item.pos > 0
+  loop: "{{ dockitems_persist }}"
+  tags: ['dock']
