@@ -29,3 +29,15 @@
     value: 0.125
 # TODO use com.apple.ncprefs to set the notification visibility - use flags between bundle-id and path
 # 41951246 -> 8396614
+- name: "Mac Settings | dock autohide"
+  community.general.osx_defaults:
+    domain: "com.apple.dock"
+    key: "autohide"
+    type: boolean
+    value: true
+- name: "Mac Settings | dock show recent apps"
+  community.general.osx_defaults:
+    domain: "com.apple.dock"
+    key: "show-recents"
+    type: boolean
+    value: true
