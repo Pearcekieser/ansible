@@ -6,6 +6,7 @@ Some ansible files for setting up a mac
 2. install ansible `brew install ansible`
 3. install ansible's community collection `ansible-galaxy collection install community.general`
 4. run the playbook `ansible-pull -U https://github.com/Pearcekieser/ansible.git`
+5. log out and back in to apply settings changes 
 
 ## References
 - [fonts](https://github.com/fubarhouse/ansible-role-macfonts/blob/master/tasks/fonts.yml)
