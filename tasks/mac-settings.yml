@@ -25,5 +25,5 @@
   community.general.osx_defaults:
     domain: "Apple Global Domain"
     key: "com.apple.trackpad.scaling"
-    type: string
-    value: "0.125"
+    type: float
+    value: 0.125
