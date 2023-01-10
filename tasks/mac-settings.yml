@@ -11,7 +11,7 @@
 #         HIDKeyboardModifierMappingSrc: 30064771129
 
 - name: Mac Settings | Brew Install defaultbrowser
-  community.general.homebrew_cask:
+  community.general.homebrew:
     name: defaultbrowser
     state: present
 - name: Mac Settings | defaultbrowser chrome
