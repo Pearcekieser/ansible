@@ -15,3 +15,15 @@
     key: AppleInterfaceStyle
     type: string
     value: Dark
+- name: "Mac Settings | Disable natural scroll"
+  community.general.osx_defaults:
+    domain: "Apple Global Domain"
+    key: "com.apple.swipescrolldirection"
+    type: int
+    value: 0
+- name: "Mac Settings | touch pad sensitivity"
+  community.general.osx_defaults:
+    domain: "Apple Global Domain"
+    key: "com.apple.trackpad.scaling"
+    type: string
+    value: "0.125"
