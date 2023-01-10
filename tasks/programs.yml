@@ -1,4 +1,4 @@
-- name: Programs | Install Programs
+- name: Programs | Install Brew Formulas
   community.general.homebrew:
     name:
       # JAVA
@@ -11,6 +11,7 @@
       - node@16
       - node@14
       - node@12
+- name: Programs | Install Brew Casks
   community.general.homebrew_cask:
     name: 
       - visual-studio-code
