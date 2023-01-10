@@ -11,3 +11,4 @@
   tasks:
     - include: tasks/fonts.yml
     - include: tasks/mac-settings.yml
+    - include: tasks/programs.yml

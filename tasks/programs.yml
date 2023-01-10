@@ -1,0 +1,13 @@
+- name: Programs | Install Programs
+  community.general.homebrew_cask:
+    name: 
+      - visual-studio-code
+      - intellij-idea-ce
+      - iterm2
+      - google-chrome
+      - firefox
+      - slack
+      - docker
+      - amazon-chime
+      # TODO include office and onedrive if personal is true
+    state: present
