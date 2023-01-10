@@ -19,8 +19,8 @@
   community.general.osx_defaults:
     domain: "Apple Global Domain"
     key: "com.apple.swipescrolldirection"
-    type: int
-    value: 0
+    type: boolean
+    value: false
 - name: "Mac Settings | touch pad sensitivity"
   community.general.osx_defaults:
     domain: "Apple Global Domain"
