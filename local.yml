@@ -10,5 +10,5 @@
       upgrade_all: true
   tasks:
     - include: tasks/fonts.yml
-    - include: tasks/mac-settings.yml
     - include: tasks/programs.yml
+    - include: tasks/mac-settings.yml

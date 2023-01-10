@@ -27,3 +27,5 @@
     key: "com.apple.trackpad.scaling"
     type: float
     value: 0.125
+# TODO use com.apple.ncprefs to set the notification visibility - use flags between bundle-id and path
+# 41951246 -> 8396614
