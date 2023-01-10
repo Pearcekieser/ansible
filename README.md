@@ -13,3 +13,4 @@ Some ansible files for setting up a mac
   - use `defaults read` and `defaults -currentHost read` to get current settings
   - diff settings with `diff a b` context can be included with `-U5`
   - use `defaults read-type` to get the type of a setting
+- [dock](https://github.com/geerlingguy/ansible-collection-mac/blob/master/roles/dock/README.md)

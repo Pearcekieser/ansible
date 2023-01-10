@@ -40,9 +40,21 @@
         path: "/System/Applications/System Preferences.app/"
         pos: 6
       - name: Activity Monitor
-        path: "/System/Applications/Activity Monitor.app/"
+        path: "/System/Applications/Utilities/Activity Monitor.app/"
         pos: 7
   when: dockitems_persist is undefined
+- name: Dock | Check for Cisco AnyConnect
+    stat:
+      path: "/Applications/Cisco/Cisco AnyConnect Secure Mobility Client.app"
+    register: cisco_anyconnect
+- name: Dock | Set add Cisco AnyConnect
+  set_fact:
+    dockitem_anyconnect:
+      - name: Cisco AnyConnect Secure Mobility Client
+        path: "/Applications/Cisco/Cisco AnyConnect Secure Mobility Client.app/"
+        pos: 2
+  when: cisco_anyconnect exists
+# TODO: check for Cisco AnyConnect, and add it to the front of the dock if it exists.
 
 - name: Dock | Brew Install Dockutil
   community.general.homebrew_cask:
@@ -62,5 +74,5 @@
   when:
     - item.pos is defined
     - item.pos > 0
-  loop: "{{ dockitems_persist }}"
+  loop: "{{ dockitems_persist + dockitem_anyconnect}}"
   tags: ['dock']
