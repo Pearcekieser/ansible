@@ -44,9 +44,9 @@
         pos: 7
   when: dockitems_persist is undefined
 - name: Dock | Check for Cisco AnyConnect
-    stat:
-      path: "/Applications/Cisco/Cisco AnyConnect Secure Mobility Client.app"
-    register: cisco_anyconnect
+  stat:
+    path: "/Applications/Cisco/Cisco AnyConnect Secure Mobility Client.app"
+  register: cisco_anyconnect
 - name: Dock | Set add Cisco AnyConnect
   set_fact:
     dockitem_anyconnect:
