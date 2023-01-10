@@ -58,7 +58,7 @@
 
 - name: Dock | Brew Install Dockutil
   community.general.homebrew_cask:
-    name: "hpedrorodrigues/tools/dockutil"
+    name: "hpedrorodrigues/tools/dockutil" # TODO replace with standard dockutil when resolved: https://github.com/kcrawford/dockutil/issues/127 
     state: present
 - name: Dock | Remove configured Dock items.
   ansible.builtin.include_tasks: dock/dock-remove.yml
