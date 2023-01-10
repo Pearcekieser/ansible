@@ -53,7 +53,7 @@
       - name: Cisco AnyConnect Secure Mobility Client
         path: "/Applications/Cisco/Cisco AnyConnect Secure Mobility Client.app/"
         pos: 2
-  when: cisco_anyconnect exists
+  when: cisco_anyconnect.stat.exists
 # TODO: check for Cisco AnyConnect, and add it to the front of the dock if it exists.
 
 - name: Dock | Brew Install Dockutil
