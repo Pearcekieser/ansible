@@ -10,6 +10,11 @@
 #       - HIDKeyboardModifierMappingDst: 30064771113
 #         HIDKeyboardModifierMappingSrc: 30064771129
 
+# TODO explore configuring screen settings in currentHost, "com.apple.windowserver.display"
+# it's also a nested structure like above
+
+# TODO enable night shift (yellow light) at sunset - no easy way to do this via cli
+
 - name: Mac Settings | Brew Install defaultbrowser
   community.general.homebrew:
     name: defaultbrowser
@@ -48,3 +53,9 @@
     key: "show-recents"
     type: boolean
     value: true
+- name: "Mac Settings | bigger mouse pointer"
+  community.general.osx_defaults:
+    domain: "com.apple.universalaccess"
+    key: "mouseDriverCursorSize"
+    type: float
+    value: 1.9675
