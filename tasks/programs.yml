@@ -10,17 +10,25 @@
       - "n" 
       - node@16
       - node@14
+      # Terminal
+      - tmux
+      - neovim
 - name: Programs | Install Brew Casks
   community.general.homebrew_cask:
     name: 
+      # IDE
       - visual-studio-code
       - intellij-idea-ce
+      # Terminal
       - iterm2
+      # Browser
       - google-chrome
       - firefox
+      # Chat
       - slack
-      - docker
       - amazon-chime
+      # Tools
+      - docker
       # JAVA
       - "homebrew/cask-versions/corretto8" # would be better if versioned like node https://github.com/corretto/corretto-8/issues/42
       - "homebrew/cask-versions/corretto11"
