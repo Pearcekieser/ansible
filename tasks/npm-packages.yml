@@ -1,0 +1,49 @@
+- name: Install Yarn
+  npm:
+    name: yarn
+    global: yes
+  tags:
+    - install
+    - node
+- name: Install eslint
+  npm:
+    name: eslint
+    global: yes
+  tags:
+    - install
+    - node
+- name: Install Typescript server
+  npm:
+    name: typescript-language-server
+    global: yes
+  tags:
+    - install
+    - node
+- name: Install Typescript
+  npm:
+    name: typescript
+    global: yes
+  tags:
+    - install
+    - node
+- name: Install TS-Node
+  npm:
+    name: ts-node
+    global: yes
+  tags:
+    - install
+    - node
+- name: Install CDK
+  npm:
+    name: aws-cdk
+    global: yes
+  tags:
+    - install
+    - node
+- name: Install t3-app
+  npm:
+    name: t3-app
+    global: yes
+  tags:
+    - install
+    - node

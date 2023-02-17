@@ -3,15 +3,17 @@ Some ansible files for setting up a mac
 
 ## Todo
 - [ ] setup sub repo for `.dotfiles` and add ansible instructions for cloning and gnu-stow for the copying the files
-  - install zsh `.zshrc` + oh-my-zsh (save zsh config) + powerlevel10k `.p10k.zsh`
-  - global `.gitignore`
-  - nvim config `~/.config/nvim/`
-  - `~/.ideavimrc`
-  - [ ] setup relative numbers for vscode 
-- [ ] ? setup ansible for ssh keys - allows you to keep .dotfiles private 
+  - [ ] install zsh `.zshrc` + oh-my-zsh (save zsh config) + powerlevel10k `.p10k.zsh`
+  - [x] global `.gitignore`
+  - [x] nvim config `~/.config/nvim/`
+  - [x] `~/.ideavimrc`
+  - [x] setup relative numbers for vscode 
+- [x] ? setup ansible for ssh keys - allows you to keep .dotfiles private 
 - [ ] add custom zshrc for work
 - [ ] learning tmux
-  - [ ] add tmux installation
+  - [x] add tmux installation
+  - [ ] tmux sessionizer / windoizer - https://github.com/ThePrimeagen/.dotfiles/tree/master/bin/.local/scripts
+  - [ ] tmux tldr chst 
   - Server < session < window < pane 
   - common commands
     - `tmux a` -> reattach to prev session
@@ -20,6 +22,7 @@ Some ansible files for setting up a mac
     - `tmux new-session -d` creates a new detached session
     - `C-d [` 
 - [ ] learning vim 
+- [ ] integrate foam / notes and todos into setup?
 
 ## Running
 1. install homebrew `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)`

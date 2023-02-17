@@ -13,6 +13,11 @@
       # Terminal
       - tmux
       - neovim
+      # Productivity
+      - fzf
+      - wireshark
+      - ripgrep
+      - tldr
 - name: Programs | Install Brew Casks
   community.general.homebrew_cask:
     name: 
