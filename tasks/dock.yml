@@ -20,6 +20,7 @@
       - Numbers
       - Pages
       - "App Store"
+      - Freeform
   when: dockitems_remove is undefined
 - name: Dock | Set persist configuration
   set_fact:

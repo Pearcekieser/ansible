@@ -28,6 +28,10 @@ Some ansible files for setting up a mac
 4. run the playbook `ansible-pull -U https://github.com/Pearcekieser/ansible.git`
 5. log out and back in to apply settings changes 
 
+## Troubleshooting
+- use `ansible-pull -vvv` for verbose output
+- `defaults could not write ...` -> make sure you are running in standard terminal and not iterm2
+
 ## References
 - [fonts](https://github.com/fubarhouse/ansible-role-macfonts/blob/master/tasks/fonts.yml)
 - **settings**
@@ -35,3 +39,4 @@ Some ansible files for setting up a mac
   - diff settings with `diff a b` context can be included with `-U5`
   - use `defaults read-type` to get the type of a setting
 - [dock](https://github.com/geerlingguy/ansible-collection-mac/blob/master/roles/dock/README.md)
+- [mac settings](https://github.com/pawelgrzybek/dotfiles/blob/master/setup-macos.sh)
