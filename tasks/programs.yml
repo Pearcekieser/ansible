@@ -18,6 +18,7 @@
       - wireshark
       - ripgrep
       - tldr
+      - gh
 - name: Programs | Install Brew Casks
   community.general.homebrew_cask:
     name: 
