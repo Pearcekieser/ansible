@@ -13,3 +13,4 @@
     - import_tasks: tasks/dock.yml
     - import_tasks: tasks/mac-settings.yml
     - import_tasks: tasks/ssh.yml
+    - import_tasks: tasks/dotfiles.yml
