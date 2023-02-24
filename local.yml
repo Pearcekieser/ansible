@@ -8,8 +8,8 @@
       update_homebrew: true
       upgrade_all: true
   tasks:
-    - include: tasks/fonts.yml
-    - include: tasks/programs.yml
-    - include: tasks/dock.yml
-    - include: tasks/mac-settings.yml
-    - include: tasks/ssh.yml
+    - import_tasks: tasks/fonts.yml
+    - import_tasks: tasks/programs.yml
+    - import_tasks: tasks/dock.yml
+    - import_tasks: tasks/mac-settings.yml
+    - import_tasks: tasks/ssh.yml
