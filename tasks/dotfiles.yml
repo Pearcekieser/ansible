@@ -12,6 +12,7 @@
     update: yes
     accept_hostkey: yes
     version: master
+    key_file: "{{ dest_key }}"
   tags:
     - dotfiles
 - name: Stow dotfiles
