@@ -28,8 +28,9 @@ Some ansible files for setting up a mac
 1. install homebrew `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)`
 2. install ansible `brew install ansible`
 3. install ansible's community collection `ansible-galaxy collection install community.general`
-4. run the playbook `ansible-pull --ask-vault-pass -U https://github.com/Pearcekieser/ansible.git`
-5. log out and back in to apply settings changes 
+4. clone the repo `git clone https://github.com/Pearcekieser/ansible.git`
+5. run the playbook `ansible-playbook --ask-vault-pass local.yml`
+6. log out and back in to apply settings changes 
 
 ## Troubleshooting
 - use `ansible-pull -vvv` for verbose output
