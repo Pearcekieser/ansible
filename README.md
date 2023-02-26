@@ -2,7 +2,7 @@
 Some ansible files for setting up a mac
 
 ## Todo
-- [ ] setup sub repo for `.dotfiles` and add ansible instructions for cloning and gnu-stow for the copying the files
+- [x] setup sub repo for `.dotfiles` and add ansible instructions for cloning and gnu-stow for the copying the files
   - [ ] install zsh `.zshrc` + oh-my-zsh (save zsh config) + powerlevel10k `.p10k.zsh`
   - [x] global `.gitignore`
   - [x] nvim config `~/.config/nvim/`
