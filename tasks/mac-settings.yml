@@ -59,3 +59,15 @@
     key: "mouseDriverCursorSize"
     type: float
     value: 1.9675
+- name: "Mac Settings | iTerm2 | set custom folder "
+  community.general.osx_defaults:
+    domain: "com.googlecode.iterm2.plist"
+    key: "PrefsCustomFolder"
+    type: string
+    value: "{{ lookup('env', 'HOME') }}/.iterm-config"
+- name: "Mac Settings | iTerm2 | enable setting from folder"
+  community.general.osx_defaults:
+    domain: "com.googlecode.iterm2.plist"
+    key: "LoadPrefsFromCustomFolder"
+    type: boolean
+    value: true
