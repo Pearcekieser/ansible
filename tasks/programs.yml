@@ -13,6 +13,7 @@
       # Terminal
       - tmux
       - neovim
+      - jq
       # Productivity
       - fzf
       - wireshark
