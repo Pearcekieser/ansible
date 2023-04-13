@@ -8,6 +8,7 @@
       - npm
       - pnpm
       - "n" 
+      - node@18 
       - node@16
       - node@14
       # Terminal
