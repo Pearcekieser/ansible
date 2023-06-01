@@ -11,6 +11,8 @@
       - node@18 
       - node@16
       - node@14
+      # Ruby
+      - ruby@2.7
       # Terminal
       - tmux
       - neovim
@@ -21,6 +23,7 @@
       - ripgrep
       - tldr
       - gh
+      - yt-dlp
 - name: Programs | Install Brew Casks
   community.general.homebrew_cask:
     name: 
