@@ -46,5 +46,7 @@
       - "homebrew/cask-versions/corretto17"
       # Music
       - spotify
+      # Utilities
+      - wireshark
       # TODO include office and onedrive if personal is true
     state: present
