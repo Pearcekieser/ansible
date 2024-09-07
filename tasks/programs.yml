@@ -10,20 +10,21 @@
       - "n" 
       - node@18 
       - node@16
-      - node@14
       # Ruby
-      - ruby@2.7
+      # - ruby@3.2
       # Terminal
       - tmux
       - neovim
       - jq
-      # Productivity
+      # CLI helpers
       - fzf
-      - wireshark
       - ripgrep
       - tldr
       - gh
       - yt-dlp
+      - delta
+      # Utilities
+      - wireshark
 - name: Programs | Install Brew Casks
   community.general.homebrew_cask:
     name: 
@@ -48,7 +49,7 @@
       - miniconda
       # Music
       - spotify
-      # Utilities
-      - wireshark
+      # Window manager
+      - rectangle
       # TODO include office and onedrive if personal is true
     state: present
