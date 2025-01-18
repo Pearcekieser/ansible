@@ -33,6 +33,7 @@
       - intellij-idea-ce
       # Terminal
       - iterm2
+      - raycast
       # Browser
       - google-chrome
       - firefox
