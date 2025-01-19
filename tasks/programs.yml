@@ -8,8 +8,7 @@
       - npm
       - pnpm
       - "n" 
-      - node@18 
-      - node@16
+      - node
       # Ruby
       # - ruby@3.2
       # Terminal

@@ -14,6 +14,12 @@
     dest: "/tmp/fonts-{{ item.name }}"
     version: "{{ item.version | default('master') }}"
   with_items: "{{ fonts }}"
+- name: Mac Fonts | add new private fonts
+  copy:
+    src: ./fonts/
+    dest: /Users/{{ ansible_user_id }}/Library/Fonts/
+  with_fileglob:
+    - "./fonts/*"
 
 - name: Mac Fonts | Install fonts from repositories
   copy:
@@ -22,9 +28,9 @@
   with_subelements:
     - "{{ fonts }}"
     - "files"
-- name: "Brew install fira code font"
+- name: "Brew install Fira Code font"
   community.general.homebrew_cask:
-    name: "homebrew/cask-fonts/font-fira-code"
+    name: "font-fira-code"
     state: present
 - name: Mac Fonts | Remove repositories
   file:
