@@ -51,5 +51,8 @@
       - spotify
       # Window manager
       - rectangle
+      # Utilities
+      - wireshark
+      - calibre
       # TODO include office and onedrive if personal is true
     state: present
